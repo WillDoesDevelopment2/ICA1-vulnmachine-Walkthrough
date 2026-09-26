@@ -1,12 +1,14 @@
 ## ICA 1 VulnHub Vulnerable Machine Walk-through 
 
-Platform: VulnHub Status: Completed Difficulty: Easy Medium Completed: September 2026
+Platform: VulnHub Status: Completed Difficulty: Easy Medium 
+Completed: September 2026
 A vulnerable machine practice focusing on web application security, credential harvesting, and Linux privilege escalation via PATH hijacking.
 
 ## Machine Information
 
-Machine Name: ICA 1 
+Machine Name: ICA 1..
 Author: onurturali Release 
+
 Date: September 25, 2021 
 Download Link: https://www.vulnhub.com/entry/ica-1,748/ 
 Target IP In my Documentation: 10.0.2.14 
