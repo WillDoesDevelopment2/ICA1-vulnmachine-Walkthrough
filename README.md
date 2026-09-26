@@ -6,8 +6,8 @@ A vulnerable machine practice focusing on web application security, credential h
 
 ## Machine Information
 
-Machine Name: ICA 1..
-Author: onurturali Release 
+Machine Name: ICA 1__
+Author: onurturali Release__
 
 Date: September 25, 2021 
 Download Link: https://www.vulnhub.com/entry/ica-1,748/ 
