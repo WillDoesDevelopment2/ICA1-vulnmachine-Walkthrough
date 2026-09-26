@@ -67,5 +67,6 @@ This machine is from VulnHub and intended for educational purposes only. All tec
 This walkthrough respects the VulnHub community by intentionally omitting full flags and sensitive credentials in linked files to preserve learning value for other learners.
 
 ## Contact
-GitHub: @yourusername LinkedIn: Your Profile Email: your.email@example.com
+GitHub: @willdoesdevelopment2 
+Email: JulianDelphinki01@pm.me
 Last Updated: September 25, 2026
