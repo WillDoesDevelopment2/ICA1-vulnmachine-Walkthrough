@@ -22,4 +22,4 @@ I designed this walk through to document my full process including dead ends and
   - Page title indicates qdPM application
 - next i used dirsearch as so 'dirsearch -u http://10.0.2.14' with the following results
 ![Alt text](/Images/InitialDirsearch.png?raw=true "Readme.txt")
-- most notable to me was the directories /backups/, /install/ and ,/uploads/ however most of these were dead ends and i will include more details from here in ./lessons-learned.md
+- most notable to me was the directories /backups/, /install/ and ,/uploads/ however most of these were dead ends and i will include more details from here in [./lessons-learned.md](https://github.com/WillDoesDevelopment2/ICA1-vulnmachine-Walkthrough/blob/main/lessons-learned.md)
