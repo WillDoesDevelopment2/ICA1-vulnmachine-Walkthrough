@@ -24,8 +24,8 @@ I designed this walk through to document my full process including dead ends and
 ![Alt text](/Images/InitialDirsearch.png?raw=true "Readme.txt")
 - most notable to me was the directories /backups/, /install/ and ,/uploads/ however most of these were dead ends and i will include more details from here in [./lessons-learned.md](https://github.com/WillDoesDevelopment2/ICA1-vulnmachine-Walkthrough/blob/main/lessons-learned.md)
 
-## Searching Exploits for Each version
+## Searching Exploits Per Version
 - I conducted many searches listed in [./lessons-learned.md](https://github.com/WillDoesDevelopment2/ICA1-vulnmachine-Walkthrough/blob/main/lessons-learned.md) however i will show the exploit that was crucial. As suspected earlier, qdPM version 9.2 with a brief search on exploit-db has 2 known exploits, one of which is an exposed plaintext username and password for the sql database
 - link to exploit https://www.exploit-db.com/exploits/50176
-- here we can simply write in the terminal curl http://10.0.2.14/core/config/databases.yml or the same web address in your chosen browser
+- here we can simply write in the terminal curl http://10.0.2.14/core/config/databases.yml or the same web address in your chosen browser</br>
 ![Alt text](/Images/CurlYmlFile.png?raw=true "Curl Yml File")
