@@ -38,7 +38,7 @@ I designed this walk through to document my full process including dead ends and
 ## Initial Access to the Target Device
 - I initially found dexter's login pair however there was no flag, but there was a clue indicating how to escalate privilege</br>
 ![Alt text](/Images/DexterLogIn.png?raw=true "Curl Yml File")
-- after getting lost yet again looking into files such as the initrd.img as discussed in [./lessons-learned.md](https://github.com/WillDoesDevelopment2/ICA1-vulnmachine-Walkthrough/blob/main/lessons-learned.md), i found i had the working password for Travis who had the user.txt flag! Yey
+- after getting lost yet again looking into files such as the initrd.img as discussed in [./lessons-learned.md](https://github.com/WillDoesDevelopment2/ICA1-vulnmachine-Walkthrough/blob/main/lessons-learned.md), i found i had the working password for Travis who had the user.txt flag! Yey</br>
 ![Alt text](/Images/TravisLogIn.png?raw=true "Curl Yml File")
 - Now on to Escalating privilege for the root flag
 
