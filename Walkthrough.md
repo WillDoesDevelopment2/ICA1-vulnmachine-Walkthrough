@@ -29,3 +29,22 @@ I designed this walk through to document my full process including dead ends and
 - link to exploit https://www.exploit-db.com/exploits/50176
 - here we can simply write in the terminal curl http://10.0.2.14/core/config/databases.yml or the same web address in your chosen browser</br>
 ![Alt text](/Images/CurlYmlFile.png?raw=true "Curl Yml File")
+
+## Initial Access to mySQL on port 3306 
+- using a simple mySQL command i was able to authenticate with the stolen credentials and navigate through the SQL database as so.
+![Alt text](/Images/MySqlLogIn.png?raw=true "Curl Yml File")
+- looking into the password file we can see some encoded passwords, It looks like most likely these are in base64. After some decoding using the command 'echo "<encoded_password>" | base64 -d ' i was able to retrieve some password log in pairs to use on the ssh port.
+
+## Initial Access to the Target Device
+-I initially found dexter's login pair however there was no flag, but there was a clue indicating how to escalate privilege
+![Alt text](/Images/DexterLogin.png?raw=true "Curl Yml File")
+- after getting lost yet again looking into files such as the initrd.img as discussed in [./lessons-learned.md](https://github.com/WillDoesDevelopment2/ICA1-vulnmachine-Walkthrough/blob/main/lessons-learned.md), i found i had the working password for Travis who had the user.txt flag! Yey
+![Alt text](/Images/TravisLogIn.png?raw=true "Curl Yml File")
+- Now on to Escalating privilege for the root flag
+
+## Privilege Escalation
+
+-  for this machine it seems that path hijacking is the most common method of privilege escalation most likely because it is the most simple and effective method for gaining root privilege. Below is my method for checking files with set User ID bits set, checking if the file was created by a root user, and then using strings to find any human readable content that doesn't use an absolute path
+![Alt text](/Images/PathHijackSearch.png?raw=true "Curl Yml File")
+- as we can see cat/root/system.info looks promising! Seems that Dexter's note from earlier was helpful! We can now start looking into creating an identical path that will be checked first before the actual cat file.
+- 
