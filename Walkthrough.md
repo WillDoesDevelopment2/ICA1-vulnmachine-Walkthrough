@@ -31,13 +31,13 @@ I designed this walk through to document my full process including dead ends and
 ![Alt text](/Images/CurlYmlFile.png?raw=true "Curl Yml File")
 
 ## Initial Access to mySQL on port 3306 
-- using a simple mySQL command i was able to authenticate with the stolen credentials and navigate through the SQL database as so.
+- using a simple mySQL command i was able to authenticate with the stolen credentials and navigate through the SQL database as so.</br>
 ![Alt text](/Images/MySqlLogIn.png?raw=true "Curl Yml File")
 - looking into the password file we can see some encoded passwords, It looks like most likely these are in base64. After some decoding using the command 'echo "<encoded_password>" | base64 -d ' i was able to retrieve some password log in pairs to use on the ssh port.
 
 ## Initial Access to the Target Device
--I initially found dexter's login pair however there was no flag, but there was a clue indicating how to escalate privilege
-![Alt text](/Images/DexterLogin.png?raw=true "Curl Yml File")
+- I initially found dexter's login pair however there was no flag, but there was a clue indicating how to escalate privilege</br>
+![Alt text](/Images/DexterLogIn.png?raw=true "Curl Yml File")
 - after getting lost yet again looking into files such as the initrd.img as discussed in [./lessons-learned.md](https://github.com/WillDoesDevelopment2/ICA1-vulnmachine-Walkthrough/blob/main/lessons-learned.md), i found i had the working password for Travis who had the user.txt flag! Yey
 ![Alt text](/Images/TravisLogIn.png?raw=true "Curl Yml File")
 - Now on to Escalating privilege for the root flag
