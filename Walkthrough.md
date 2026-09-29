@@ -47,5 +47,5 @@ I designed this walk through to document my full process including dead ends and
 -  for this machine it seems that path hijacking is the most common method of privilege escalation most likely because it is the most simple and effective method for gaining root privilege. Below is my method for checking files with set User ID bits set, checking if the file was created by a root user, and then using strings to find any human readable content that doesn't use an absolute path
 ![Alt text](/Images/PathHijackSearch.png?raw=true "Curl Yml File")
 - as we can see cat/root/system.info looks promising! Seems that Dexter's note from earlier was helpful! We can now start looking into creating an identical path that will be checked first before the actual cat file. below are all the commands i used and calls i made to get root access
-![Alt text](/Images/RootFlag.png?raw=true "Curl Yml File")
+![Alt text](/Images/Rootflag.png?raw=true "Curl Yml File")
 
