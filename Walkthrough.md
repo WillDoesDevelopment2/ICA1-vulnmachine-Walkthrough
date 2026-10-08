@@ -7,7 +7,7 @@ I designed this walk through to document my full process including dead ends and
 - sudo arp-scan -l exposed the target machine IP (10.0.2.14)
 - at http://10.0.2.14 a publicly exposed website that was running a database service called qdPM with a login page and password recovery page. Note the qdPM version (9.2) is displayed publicly at the bottom
 ![Alt text](/Images/LoginPage.png?raw=true "loginpage")
-- looking for typical files such as /Readmme.txt or Robots.txt i found a read me file with the following information with an email 'support@qdPM.net'. This mostly indicates that we may be looking for a known vulnerability related to qdPM. the robots.txt file was available but was disallowed </br>
+- looking for typical files such as /Readme.txt or Robots.txt i found a read me file with the following information with an email 'support@qdPM.net'. This mostly indicates that we may be looking for a known vulnerability related to qdPM. the robots.txt file was available but was disallowed </br>
 ![Alt text](/Images/ICA1_Readme.png?raw=true "Readme.txt")
 
 ### From More Direct Reconnaissance ###
@@ -43,7 +43,6 @@ I designed this walk through to document my full process including dead ends and
 - Now on to Escalating privilege for the root flag
 
 ## Privilege Escalation
-
 -  for this machine it seems that path hijacking is the most common method of privilege escalation most likely because it is the most simple and effective method for gaining root privilege. Below is my method for checking files with set User ID bits set, checking if the file was created by a root user, and then using strings to find any human readable content that doesn't use an absolute path
 ![Alt text](/Images/PathHijackSearch.png?raw=true "Curl Yml File")
 - as we can see cat/root/system.info looks promising! Seems that Dexter's note from earlier was helpful! We can now start looking into creating an identical path that will be checked first before the actual cat file. below are all the commands i used and calls i made to get root access
